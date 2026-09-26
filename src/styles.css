@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  margin: 0;
+  color: #1976d2;
+  font-size: 22px;
+}
+
+.header input {
+  width: 360px;
+  margin: 0 auto;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.layout {
+  max-width: 950px;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  gap: 24px;
+  margin: 24px auto;
+  padding: 0 20px;
+}
+
+.drawer-menu {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 16px;
+}
+
+.drawer-menu h2 {
+  margin: 0 0 14px;
+  padding: 0 12px;
+  color: #1976d2;
+}
+
+.drawer-menu button {
+  padding: 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.drawer-menu button:hover,
+.drawer-menu .active {
+  color: #1976d2;
+  background: #e3f2fd;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post,
+.suggestions {
+  padding: 18px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.post-user h2,
+.post-user p {
+  margin: 0;
+}
+
+.post-user h2 {
+  font-size: 16px;
+}
+
+.post-user p {
+  margin-top: 4px;
+  color: #777;
+  font-size: 13px;
+}
+
+.post > p {
+  margin: 18px 0;
+}
+
+.post img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+.post-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.post-buttons button {
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 5px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.post-buttons button:hover {
+  background: #ddd;
+}
+
+.suggestions {
+  height: fit-content;
+}
+
+.suggestions h2 {
+  margin: 0 0 18px;
+  font-size: 17px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.person span {
+  flex: 1;
+  font-size: 14px;
+}
+
+@media (max-width: 850px) {
+  .layout {
+    display: block;
+  }
+
+  .suggestions {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 14px;
+  }
+
+  .header input {
+    width: 100%;
+  }
+
+  .layout {
+    display: block;
+    margin-top: 14px;
+    padding: 0 12px;
+  }
+
+}

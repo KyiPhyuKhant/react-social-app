@@ -1,13 +1,17 @@
-import {AppBar, Toolbar, Typography} from "@mui/material";
+import { Avatar, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
-export default function Header() {
+function Header({ onMenuClick }) {
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6">
-          This is the header.
-        </Typography>
-      </Toolbar>
-    </AppBar>
+    <header className="header">
+      <IconButton onClick={onMenuClick} aria-label="Open menu">
+        <MenuIcon />
+      </IconButton>
+
+      <h1>Social App</h1>
+
+    </header>
   );
 }
+
+export default Header;
